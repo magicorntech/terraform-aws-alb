@@ -1,0 +1,10 @@
+variable "tenant" {}
+variable "name" {}
+variable "environment" {}
+variable "vpc_id" {}
+variable "pbl_subnet_ids" {}
+variable "idle_timeout" {}
+variable "drop_invalid_header_fields" {}
+variable "enable_deletion_protection" {}
+variable "ssl_policy" {}
+variable "ssl_zone" {}
