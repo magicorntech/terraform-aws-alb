@@ -2,7 +2,7 @@ variable "tenant" {}
 variable "name" {}
 variable "environment" {}
 variable "vpc_id" {}
-variable "pbl_subnet_ids" {}
+variable "subnet_ids" {}
 variable "idle_timeout" {}
 variable "internal" {}
 variable "drop_invalid_header_fields" {}

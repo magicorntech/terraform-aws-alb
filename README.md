@@ -4,13 +4,13 @@ Magicorn made Terraform Module for AWS Provider
 --
 ```
 module "alb" {
-  source         = "magicorntech/alb/aws"
-  version        = "0.1.0"
-  tenant         = var.tenant
-  name           = var.name
-  environment    = var.environment
-  vpc_id         = var.vpc_id
-  pbl_subnet_ids = var.pbl_subnet_ids
+  source      = "magicorntech/alb/aws"
+  version     = "0.1.1"
+  tenant      = var.tenant
+  name        = var.name
+  environment = var.environment
+  vpc_id      = var.vpc_id
+  subnet_ids  = var.pbl_subnet_ids
 
   # ALB Configuration
   idle_timeout               = 60

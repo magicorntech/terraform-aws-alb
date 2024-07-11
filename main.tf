@@ -1,7 +1,7 @@
 ##### Create Load Balancer
 resource "aws_alb" "main" {
   name                       = "${var.tenant}-${var.name}-alb-${var.environment}"
-  subnets                    = var.pbl_subnet_ids
+  subnets                    = var.subnet_ids
   security_groups            = [aws_security_group.main.id]
   idle_timeout               = var.idle_timeout
   internal                   = var.internal
