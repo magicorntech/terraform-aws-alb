@@ -4,7 +4,7 @@ resource "aws_alb" "main" {
   subnets                    = var.pbl_subnet_ids
   security_groups            = [aws_security_group.main.id]
   idle_timeout               = var.idle_timeout
-  internal                   = false
+  internal                   = var.internal
   drop_invalid_header_fields = var.drop_invalid_header_fields
   enable_deletion_protection = var.enable_deletion_protection
 
@@ -40,7 +40,7 @@ resource "aws_alb_listener" "https" {
   port              = "443"
   protocol          = "HTTPS"
   ssl_policy        = var.ssl_policy
-  certificate_arn   = aws_acm_certificate.main.arn
+  certificate_arn   = (var.route53 == true) ? aws_acm_certificate.main[0].arn : var.acm_cert_id
   
   default_action {
     type           = "fixed-response"

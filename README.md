@@ -5,7 +5,7 @@ Magicorn made Terraform Module for AWS Provider
 ```
 module "alb" {
   source         = "magicorntech/alb/aws"
-  version        = "0.0.1"
+  version        = "0.1.0"
   tenant         = var.tenant
   name           = var.name
   environment    = var.environment
@@ -14,6 +14,7 @@ module "alb" {
 
   # ALB Configuration
   idle_timeout               = 300
+  internal                   = false
   drop_invalid_header_fields = true
   enable_deletion_protection = true
   ssl_policy                 = "ELBSecurityPolicy-TLS13-1-2-2021-06"

@@ -4,7 +4,10 @@ variable "environment" {}
 variable "vpc_id" {}
 variable "pbl_subnet_ids" {}
 variable "idle_timeout" {}
+variable "internal" {}
 variable "drop_invalid_header_fields" {}
 variable "enable_deletion_protection" {}
 variable "ssl_policy" {}
-variable "ssl_zone" {}
+variable "route53" {}
+variable "hosted_zone" {}
+variable "acm_cert_id" {}
